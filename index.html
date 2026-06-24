@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PT Digdaya Solusi Sistem — Teknologi & AI untuk Bisnis Indonesia</title>
+<meta name="description" content="PT Digdaya Solusi Sistem — perusahaan teknologi & AI di Indonesia. Spesialis AI agent, pengembangan perangkat lunak, data analitik, dan konsultasi TI untuk industri dan healthcare.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://digdayasolusi.co.id/">
+<meta property="og:title" content="PT Digdaya Solusi Sistem — Teknologi & AI untuk Bisnis Indonesia">
+<meta property="og:description" content="Perusahaan teknologi & AI di Indonesia. Spesialis AI agent, pengembangan perangkat lunak, data analitik, dan konsultasi TI untuk industri dan healthcare.">
+<meta property="og:image" content="https://digdayasolusi.co.id/assets/og-image.png">
+<meta property="og:locale" content="id_ID">
+<meta property="og:locale:alternate" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PT Digdaya Solusi Sistem — Teknologi & AI untuk Bisnis Indonesia">
+<meta name="twitter:description" content="Perusahaan teknologi & AI di Indonesia. AI agent, software, data, konsultasi TI.">
+<meta name="twitter:image" content="https://digdayasolusi.co.id/assets/og-image.png">
+
+<!-- Canonical & hreflang (client-side toggle — same URL) -->
+<link rel="canonical" href="https://digdayasolusi.co.id/">
+<link rel="alternate" hreflang="id" href="https://digdayasolusi.co.id/">
+<link rel="alternate" hreflang="en" href="https://digdayasolusi.co.id/">
+<link rel="alternate" hreflang="x-default" href="https://digdayasolusi.co.id/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23F59E0B'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='11' fill='white'>DSS</text></svg>">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#FFFFFF;
+  --bg-alt:#F6F8FC;
+  --navy:#0F1B2D;
+  --body-color:#475569;
+  --muted:#94A3B8;
+  --amber:#F59E0B;
+  --amber-mid:#FCD34D;
+  --amber-bg:#FEF3C7;
+  --blue:#2563EB;
+  --blue-bg:#EFF6FF;
+  --border:#EAEEF5;
+  --shadow:0 8px 30px rgba(15,27,45,0.06);
+  --shadow-md:0 12px 40px rgba(15,27,45,0.10);
+  --shadow-lg:0 20px 56px rgba(15,27,45,0.14);
+  --r:18px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--body-color);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;text-wrap:pretty}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;color:var(--navy);line-height:1.13;letter-spacing:-0.02em}
+a{text-decoration:none}
+img,svg{display:block}
+.mono{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:900;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(24px,5vw,80px);transition:background .35s,box-shadow .35s}
+nav.scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--border),0 4px 24px rgba(15,27,45,.04)}
+.nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer}
+.logo-mark{width:34px;height:34px;background:var(--amber);border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:12px;color:#fff;letter-spacing:-.5px;flex-shrink:0}
+.logo-text{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:var(--navy);white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:30px;list-style:none}
+.nav-links a{font-size:14px;font-weight:500;color:var(--body-color);transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--navy)}
+.btn-amber{background:linear-gradient(135deg,#F59E0B,#F97316);color:#fff;border:none;border-radius:10px;padding:9px 20px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:13.5px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 14px rgba(245,158,11,.28)}
+.btn-amber:hover{transform:translateY(-1px);box-shadow:0 6px 22px rgba(245,158,11,.38)}
+.btn-outline{background:#fff;color:var(--navy);border:1.5px solid var(--border);border-radius:10px;padding:9px 20px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:13.5px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:all .2s}
+.btn-outline:hover{border-color:#CBD5E1;transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none}
+.hamburger span{width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all .3s;display:block}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mob-menu{display:none;position:fixed;top:68px;inset-inline:0;background:rgba(255,255,255,.98);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);z-index:899;flex-direction:column;gap:0;padding:8px 24px 24px}
+.mob-menu.open{display:flex}
+.mob-menu a{font-weight:500;font-size:16px;color:var(--navy);padding:14px 0;border-bottom:1px solid var(--border)}
+.mob-menu a:last-child{border-bottom:none}
+.mob-cta{margin-top:12px}
+
+/* ── LANG TOGGLE ── */
+.lang-toggle{display:flex;border:1.5px solid var(--border);border-radius:8px;overflow:hidden;background:#fff;flex-shrink:0}
+.lt-btn{background:none;border:none;padding:5px 11px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:11px;color:var(--muted);cursor:pointer;transition:all .2s;letter-spacing:.06em}
+.lt-btn.active{background:var(--navy);color:#fff}
+.lt-btn:hover:not(.active){color:var(--navy)}
+.mob-lang{display:flex;gap:8px;padding:16px 0 4px;border-bottom:1px solid var(--border)}
+.nav-right{display:flex;align-items:center;gap:10px}
+
+/* ── SECTIONS ── */
+.section-wrap{padding:100px clamp(24px,5vw,80px)}
+.section-label{color:var(--amber);display:block;margin-bottom:14px}
+.section-title{font-size:clamp(28px,3.2vw,44px);font-weight:700;margin-bottom:18px}
+.section-intro{font-size:17px;line-height:1.75;color:var(--body-color);max-width:600px;margin-bottom:52px}
+
+/* ── HERO ── */
+#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:var(--white);padding:120px clamp(24px,5vw,80px) 80px}
+.hero-blob{position:absolute;border-radius:50%;pointer-events:none;will-change:transform}
+.blob-a{width:700px;height:700px;background:radial-gradient(circle,rgba(245,158,11,.07) 0%,transparent 65%);top:-140px;right:-140px}
+.blob-b{width:560px;height:560px;background:radial-gradient(circle,rgba(37,99,235,.055) 0%,transparent 65%);bottom:-80px;left:-80px}
+.hero-inner{display:flex;align-items:center;justify-content:space-between;gap:60px;width:100%;max-width:1280px;margin:0 auto;position:relative;z-index:1}
+.hero-copy{max-width:580px;flex:1}
+.hero-eyebrow{color:var(--amber);margin-bottom:22px}
+#hero h1{font-size:clamp(36px,4.2vw,62px);font-weight:700;margin-bottom:26px;color:var(--navy)}
+#hero h1 em{font-style:normal;color:var(--amber)}
+.hero-sub{font-size:17px;line-height:1.78;color:var(--body-color);margin-bottom:40px;max-width:520px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-ctas .btn-amber,.hero-ctas .btn-outline{padding:14px 28px;font-size:15px}
+.hero-visual{flex-shrink:0;position:relative}
+.float-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:260px}
+.float-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:18px 16px;box-shadow:var(--shadow);animation:floatUp 4s ease-in-out infinite}
+.float-card:nth-child(2){animation-delay:.7s}
+.float-card:nth-child(3){animation-delay:1.3s}
+.float-card:nth-child(4){animation-delay:1.9s}
+.float-card-icon{width:32px;height:32px;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center}
+.float-card-label{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;color:var(--navy);line-height:1.2}
+@keyframes floatUp{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+
+/* ── TENTANG ── */
+#tentang{background:var(--bg-alt)}
+.tentang-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.tentang-text p{font-size:16.5px;line-height:1.8;color:var(--body-color)}
+.value-chips{display:flex;flex-direction:column;gap:14px;padding-top:8px}
+.chip{background:#fff;border:1px solid var(--border);border-radius:13px;padding:18px 20px;display:flex;align-items:flex-start;gap:14px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}
+.chip:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.chip-icon{width:36px;height:36px;border-radius:9px;background:var(--amber-bg);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.chip-body strong{font-family:'Space Grotesk',sans-serif;font-size:14px;color:var(--navy);display:block;margin-bottom:3px}
+.chip-body span{font-size:13px;line-height:1.5;color:var(--body-color)}
+
+/* ── SOLUSI ── */
+.solusi-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.sol-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:34px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.sol-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--r) var(--r) 0 0}
+.sol-card.c-amber::after{background:linear-gradient(90deg,#F59E0B,#FBBF24)}
+.sol-card.c-blue::after{background:linear-gradient(90deg,#2563EB,#38BDF8)}
+.sol-card.c-slate::after{background:linear-gradient(90deg,#475569,#94A3B8)}
+.sol-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.sol-icon{width:50px;height:50px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.sol-icon.amber{background:var(--amber-bg)}
+.sol-icon.blue{background:var(--blue-bg)}
+.sol-icon.slate{background:#F1F5F9}
+.sol-card h3{font-size:20px;font-weight:700;margin-bottom:11px}
+.sol-card p{font-size:14px;line-height:1.7;color:var(--body-color);margin-bottom:18px}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
+.tag{font-family:'JetBrains Mono',monospace;font-size:10.5px;padding:4px 11px;border-radius:999px;background:var(--bg-alt);color:var(--navy);border:1px solid var(--border)}
+.kbli{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);display:block;margin-bottom:18px}
+.card-cta{font-size:13px;font-weight:700;color:var(--blue);display:inline-flex;align-items:center;gap:5px;transition:gap .2s}
+.card-cta:hover{gap:9px}
+
+/* ── PRODUK ── */
+#produk{background:var(--bg-alt)}
+.produk-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:36px}
+.prod-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:22px 20px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;cursor:pointer}
+.prod-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.prod-name{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.prod-desc{font-size:12.5px;line-height:1.55;color:var(--body-color);margin-bottom:14px}
+.status{display:inline-flex;align-items:center;gap:5px;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;padding:4px 11px;border-radius:999px}
+.status.live{background:#DCFCE7;color:#166534}
+.status.demo{background:var(--blue-bg);color:#1D4ED8}
+.status.pilot{background:var(--amber-bg);color:#92400E}
+.status-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+.produk-cta{text-align:center}
+.produk-cta .btn-amber{padding:15px 32px;font-size:15px}
+.produk-note{margin-top:16px;font-size:13px;color:var(--muted)}
+.produk-note a{color:var(--blue);font-weight:600}
+
+/* ── KENAPA ── */
+.kenapa-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+.kenapa-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:34px;box-shadow:var(--shadow);transition:transform .2s}
+.kenapa-card:hover{transform:translateY(-3px)}
+.kenapa-num{font-family:'Space Grotesk',sans-serif;font-size:52px;font-weight:700;color:var(--amber);opacity:.2;line-height:1;margin-bottom:18px}
+.kenapa-card h3{font-size:18.5px;font-weight:700;margin-bottom:10px}
+.kenapa-card p{font-size:14px;line-height:1.7}
+
+/* ── TIM ── */
+#tim{background:var(--bg-alt)}
+.tim-grid{display:grid;grid-template-columns:1fr;gap:22px;max-width:520px;margin-top:40px}
+.founder{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:32px;box-shadow:var(--shadow);display:flex;gap:20px;transition:box-shadow .2s}
+.founder:hover{box-shadow:var(--shadow-md)}
+.founder-av{width:54px;height:54px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;color:#fff;flex-shrink:0;letter-spacing:-.5px}
+.av-blue{background:var(--blue)}
+.founder h3{font-size:17px;font-weight:700;margin-bottom:4px}
+.founder-role{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--amber);text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:10px}
+.founder p{font-size:13px;line-height:1.65}
+
+/* ── KONTAK BAND ── */
+#kontak{background:var(--navy);padding:100px clamp(24px,5vw,80px);text-align:center}
+#kontak h2{font-size:clamp(28px,3.2vw,44px);color:#fff;margin-bottom:18px}
+#kontak .sub{font-size:17px;color:rgba(255,255,255,.6);max-width:500px;margin:0 auto 40px;line-height:1.75}
+.kontak-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:56px}
+.kontak-ctas .btn-amber{padding:15px 30px;font-size:15px}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.2);border-radius:10px;padding:15px 30px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:15px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:all .2s}
+.btn-ghost:hover{border-color:rgba(255,255,255,.45);background:rgba(255,255,255,.06)}
+.kontak-details{display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+.kd-item{display:flex;flex-direction:column;gap:5px}
+.kd-label{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:rgba(255,255,255,.3);letter-spacing:.12em;text-transform:uppercase}
+.kd-val{font-size:14px;color:rgba(255,255,255,.75);font-weight:500}
+
+/* ── FOOTER ── */
+footer{background:#070F1A;padding:52px clamp(24px,5vw,80px) 32px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:28px}
+.footer-brand p{font-size:13px;line-height:1.65;color:rgba(255,255,255,.35);margin-top:16px;max-width:260px}
+.footer-col h4{font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;color:rgba(255,255,255,.85);margin-bottom:18px;text-transform:uppercase;letter-spacing:.08em}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:11px}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.35);transition:color .2s}
+.footer-links a:hover{color:rgba(255,255,255,.75)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p,.footer-bottom a{font-size:11.5px;color:rgba(255,255,255,.22)}
+.footer-bottom a:hover{color:rgba(255,255,255,.5)}
+
+/* ── WHATSAPP FLOAT ── */
+.wa-btn{position:fixed;bottom:28px;right:28px;z-index:800;width:56px;height:56px;background:linear-gradient(135deg,#25D366,#22C55E);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.38);animation:waPulse 2.8s ease-in-out infinite;transition:transform .2s}
+.wa-btn:hover{transform:scale(1.1);animation:none;box-shadow:0 10px 32px rgba(37,211,102,.5)}
+@keyframes waPulse{0%,100%{box-shadow:0 8px 24px rgba(37,211,102,.38)}50%{box-shadow:0 8px 36px rgba(37,211,102,.6)}}
+
+/* ── REVEAL ── */
+.r{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+.r.vis{opacity:1;transform:none}
+.d1{transition-delay:.1s}
+.d2{transition-delay:.2s}
+.d3{transition-delay:.3s}
+.d4{transition-delay:.4s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .solusi-grid{grid-template-columns:1fr}
+  .produk-strip{grid-template-columns:1fr 1fr}
+  .kenapa-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .section-wrap{padding:72px 24px}
+  #hero{padding:100px 24px 64px;flex-direction:column}
+  .hero-inner{flex-direction:column;gap:48px;text-align:center}
+  .hero-ctas{justify-content:center}
+  .float-grid{width:230px}
+  .tentang-grid{grid-template-columns:1fr;gap:40px}
+  nav .nav-links,nav>.nav-right>.btn-amber{display:none}
+  .nav-right .lang-toggle{display:flex}
+  .hamburger{display:flex}
+  .footer-grid{grid-template-columns:1fr;gap:32px}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .kontak-details{gap:28px}
+}
+@media(max-width:500px){
+  .float-grid{display:none}
+  .produk-strip{grid-template-columns:1fr}
+}
+</style>
+
+<!-- JSON-LD Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PT Digdaya Solusi Sistem",
+  "url": "https://digdayasolusi.co.id",
+  "logo": "https://digdayasolusi.co.id/assets/og-image.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+62-821-8417-551",
+    "email": "kontak@digdayasolusi.co.id",
+    "contactType": "customer service",
+    "areaServed": "ID",
+    "availableLanguage": ["Indonesian", "English"],
+    "hoursAvailable": "Mo-Fr 08:00-17:00, Sa 09:00-13:00"
+  },
+  "sameAs": ["https://dssindustria.com"]
+}
+</script>
+</head>
+<body>
+
+<!-- ════════════════ NAVBAR ════════════════ -->
+<nav id="navbar">
+  <div class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <div class="logo-mark">DSS</div>
+    <span class="logo-text">Digdaya Solusi Sistem</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#tentang" data-i18n="nav.tentang">Tentang</a></li>
+    <li><a href="#solusi" data-i18n="nav.solusi">Solusi</a></li>
+    <li><a href="#produk" data-i18n="nav.produk">Produk</a></li>
+    <li><a href="#kontak" data-i18n="nav.kontak">Kontak</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lt-btn" data-lang="id" onclick="setLang('id')">ID</button>
+      <button class="lt-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    </div>
+    <a href="https://wa.me/628218417551" target="_blank" rel="noopener" class="btn-amber" style="font-size:13px;padding:9px 18px" data-i18n="nav.cta">Hubungi Kami</a>
+  </div>
+  <button class="hamburger" id="ham" aria-label="Menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<nav class="mob-menu" id="mob">
+  <div class="mob-lang">
+    <div class="lang-toggle">
+      <button class="lt-btn" data-lang="id" onclick="setLang('id');closeMenu()">ID</button>
+      <button class="lt-btn" data-lang="en" onclick="setLang('en');closeMenu()">EN</button>
+    </div>
+  </div>
+  <a href="#tentang" onclick="closeMenu()" data-i18n="nav.tentang">Tentang</a>
+  <a href="#solusi" onclick="closeMenu()" data-i18n="nav.solusi">Solusi</a>
+  <a href="#produk" onclick="closeMenu()" data-i18n="nav.produk">Produk</a>
+  <a href="#kontak" onclick="closeMenu()" data-i18n="nav.kontak">Kontak</a>
+  <a href="https://wa.me/628218417551" target="_blank" rel="noopener" class="btn-amber mob-cta" style="justify-content:center" onclick="closeMenu()" data-i18n="nav.mob.wa">💬 Hubungi via WhatsApp</a>
+</nav>
+
+<!-- ════════════════ HERO ════════════════ -->
+<section id="hero" data-screen-label="Hero">
+  <div class="hero-blob blob-a" id="blobA"></div>
+  <div class="hero-blob blob-b" id="blobB"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="mono hero-eyebrow section-label" data-i18n="hero.eyebrow">PT DIGDAYA SOLUSI SISTEM · INDONESIA</span>
+      <h1 data-i18n="hero.h1">Memberdayakan<br>Bisnis Indonesia<br>dengan <em>Teknologi</em> & AI.</h1>
+      <p class="hero-sub" data-i18n="hero.sub">Kami merancang perangkat lunak, AI agent, dan solusi data yang membantu perusahaan bertumbuh, beradaptasi, dan memimpin di era digital — dengan eksekusi teknis end-to-end dan kedalaman pengalaman lapangan.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/628218417551" target="_blank" rel="noopener" class="btn-amber" data-i18n="hero.cta1">💬 Konsultasi Gratis</a>
+        <a href="https://dssindustria.com" target="_blank" rel="noopener" class="btn-outline" data-i18n="hero.cta2">Lihat Produk Kami →</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="float-grid">
+        <div class="float-card">
+          <div class="float-card-icon" style="background:var(--amber-bg)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+          </div>
+          <div class="float-card-label" data-i18n="hero.card.ai">AI Agent</div>
+        </div>
+        <div class="float-card">
+          <div class="float-card-icon" style="background:var(--blue-bg)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="float-card-label" data-i18n="hero.card.dev">Web & Mobile</div>
+        </div>
+        <div class="float-card">
+          <div class="float-card-icon" style="background:var(--blue-bg)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div class="float-card-label" data-i18n="hero.card.data">Data</div>
+        </div>
+        <div class="float-card">
+          <div class="float-card-icon" style="background:#F1F5F9">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="float-card-label" data-i18n="hero.card.consulting">Konsultasi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ TENTANG ════════════════ -->
+<section id="tentang" class="section-wrap" data-screen-label="Tentang">
+  <div class="tentang-grid">
+    <div class="tentang-text">
+      <span class="mono section-label" data-i18n="tentang.label">TENTANG KAMI</span>
+      <h2 class="section-title r" data-i18n="tentang.title">Studio Teknologi yang Lahir dari Lantai Industri</h2>
+      <p class="r d1" data-i18n="tentang.p">PT Digdaya Solusi Sistem adalah perusahaan teknologi berbadan hukum yang melayani klien di seluruh Indonesia. Kami menggabungkan keahlian domain — industri/manufaktur dan healthcare — dengan eksekusi teknis modern: pengembangan perangkat lunak, AI agent, pengolahan data, dan konsultasi TI. Misi kami sederhana: memberikan solusi teknologi bernilai nyata yang bisa diukur, bukan janji.</p>
+    </div>
+    <div class="value-chips">
+      <div class="chip r d1">
+        <div class="chip-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div class="chip-body">
+          <strong data-i18n="chip1.title">Praktisi, bukan teoritis</strong>
+          <span data-i18n="chip1.desc">Lahir dari pengalaman nyata di lantai industri & manufaktur</span>
+        </div>
+      </div>
+      <div class="chip r d2">
+        <div class="chip-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <div class="chip-body">
+          <strong data-i18n="chip2.title">Sistem AI yang bisa diaudit</strong>
+          <span data-i18n="chip2.desc">Setiap langkah ter-trace</span>
+        </div>
+      </div>
+      <div class="chip r d3">
+        <div class="chip-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="chip-body">
+          <strong data-i18n="chip3.title">Lokal & responsif</strong>
+          <span data-i18n="chip3.desc">Bahasa Indonesia, dukungan langsung</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ SOLUSI ════════════════ -->
+<section id="solusi" class="section-wrap" data-screen-label="Solusi">
+  <span class="mono section-label" data-i18n="solusi.label">SOLUSI & LAYANAN</span>
+  <h2 class="section-title r" data-i18n="solusi.title">Empat Cara Kami Membantu Anda</h2>
+  <p class="section-intro r d1" data-i18n="solusi.intro">Layanan teknologi resmi sesuai bidang usaha berizin (KBLI). Bisa proyek kustom dari nol, atau adopsi produk siap pakai kami.</p>
+  <div class="solusi-grid">
+    <div class="sol-card c-amber r">
+      <div class="sol-icon amber">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+      </div>
+      <h3 data-i18n="sol1.title">AI Agent & Otomasi Cerdas</h3>
+      <p data-i18n="sol1.desc">Sistem multi-agent (planner–executor–validator), machine learning, dan otomasi alur kerja yang bisa diaudit.</p>
+      <div class="tags"><span class="tag">Multi-Agent</span><span class="tag">Machine Learning</span><span class="tag">Otomasi</span></div>
+      <span class="kbli">KBLI 62015</span>
+      <a href="#kontak" class="card-cta"><span data-i18n="sol1.cta">Pelajari</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="sol-card c-blue r d1">
+      <div class="sol-icon blue">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      </div>
+      <h3 data-i18n="sol2.title">Pengembangan Perangkat Lunak</h3>
+      <p data-i18n="sol2.desc">Aplikasi web & mobile dan software siap pakai, dirancang mengikuti proses kerja riil Anda — bukan sebaliknya.</p>
+      <div class="tags"><span class="tag">Web</span><span class="tag">Mobile</span><span class="tag">Software</span></div>
+      <span class="kbli">KBLI 62019 · 58200</span>
+      <a href="#kontak" class="card-cta"><span data-i18n="sol2.cta">Pelajari</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="sol-card c-blue r d2">
+      <div class="sol-icon blue">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      </div>
+      <h3 data-i18n="sol3.title">Data, Analitik & Platform Digital</h3>
+      <p data-i18n="sol3.desc">Data engineering, dashboard pendukung keputusan, portal web, dan platform e-commerce.</p>
+      <div class="tags"><span class="tag">Data</span><span class="tag">Dashboard</span><span class="tag">E-Commerce</span></div>
+      <span class="kbli">KBLI 63111 · 63122 · 62012</span>
+      <a href="#kontak" class="card-cta"><span data-i18n="sol3.cta">Pelajari</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="sol-card c-slate r d3">
+      <div class="sol-icon slate">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3 data-i18n="sol4.title">Konsultasi TI, Keamanan & Infrastruktur</h3>
+      <p data-i18n="sol4.desc">Audit, blueprint arsitektur, vendor selection, keamanan informasi, hosting & pengadaan TI.</p>
+      <div class="tags"><span class="tag">Konsultasi</span><span class="tag">Keamanan</span><span class="tag">Hosting</span></div>
+      <span class="kbli">KBLI 62029 · 62021 · 70209 · 63112 · 46511/12</span>
+      <a href="#kontak" class="card-cta"><span data-i18n="sol4.cta">Pelajari</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ PRODUK ════════════════ -->
+<section id="produk" class="section-wrap" data-screen-label="Produk">
+  <span class="mono section-label" data-i18n="produk.label">PRODUK KAMI</span>
+  <h2 class="section-title r" data-i18n="produk.title">Sudah Punya Produk Siap Pakai: DSS Industria</h2>
+  <p class="section-intro r d1" data-i18n="produk.intro">Di bawah brand <strong>DSS Industria</strong>, kami sudah membangun 9 aplikasi untuk industri &amp; healthcare — sebagian bisa langsung dicoba demonya. Selengkapnya di situs produk kami.</p>
+  <div class="produk-strip">
+    <div class="prod-card r" onclick="window.open('https://dssindustria.com','_blank','noopener')">
+      <div class="prod-name" data-i18n="prod1.name">DSS Supplier Selection</div>
+      <div class="prod-desc" data-i18n="prod1.desc">Pilih supplier terbaik dengan AHP-TOPSIS.</div>
+      <span class="status live"><span class="status-dot"></span><span data-i18n="prod1.status">LIVE</span></span>
+    </div>
+    <div class="prod-card r d1" onclick="window.open('https://dssindustria.com','_blank','noopener')">
+      <div class="prod-name" data-i18n="prod2.name">Inventory Industria</div>
+      <div class="prod-desc" data-i18n="prod2.desc">Stok terintegrasi: web + mobile + AI vision.</div>
+      <span class="status demo"><span class="status-dot"></span><span data-i18n="prod2.status">Siap Demo</span></span>
+    </div>
+    <div class="prod-card r d2" onclick="window.open('https://dssindustria.com','_blank','noopener')">
+      <div class="prod-name" data-i18n="prod3.name">Scribe Medis</div>
+      <div class="prod-desc" data-i18n="prod3.desc">Dokumentasi konsultasi dokter otomatis.</div>
+      <span class="status pilot"><span class="status-dot"></span><span data-i18n="prod3.status">Membuka Pilot</span></span>
+    </div>
+    <div class="prod-card r d3" onclick="window.open('https://dssindustria.com','_blank','noopener')">
+      <div class="prod-name" data-i18n="prod4.name">JadwalAI</div>
+      <div class="prod-desc" data-i18n="prod4.desc">Booking janji temu klinik via WhatsApp 24/7.</div>
+      <span class="status pilot"><span class="status-dot"></span><span data-i18n="prod4.status">Membuka Pilot</span></span>
+    </div>
+  </div>
+  <div class="produk-cta r">
+    <a href="https://dssindustria.com" target="_blank" rel="noopener" class="btn-amber" data-i18n="produk.cta">Jelajahi Semua Produk di dssindustria.com →</a>
+    <p class="produk-note"><span data-i18n="produk.note">Butuh solusi yang belum ada di daftar? Kami bangun kustom. →</span> <a href="https://wa.me/628218417551" target="_blank" rel="noopener" data-i18n="produk.note.link">Konsultasi</a></p>
+  </div>
+</section>
+
+<!-- ════════════════ KENAPA ════════════════ -->
+<section id="kenapa" class="section-wrap" data-screen-label="Kenapa Kami">
+  <span class="mono section-label" data-i18n="kenapa.label">KENAPA DIGDAYA SOLUSI SISTEM</span>
+  <h2 class="section-title r" data-i18n="kenapa.title">Domain + Eksekusi, dalam Satu Tim</h2>
+  <div class="kenapa-grid">
+    <div class="kenapa-card r">
+      <div class="kenapa-num">01</div>
+      <h3 data-i18n="kenapa1.title">Kedalaman Lapangan</h3>
+      <p data-i18n="kenapa1.desc">Kami paham operasi pabrik &amp; klinik, bukan sekadar koding.</p>
+    </div>
+    <div class="kenapa-card r d1">
+      <div class="kenapa-num">02</div>
+      <h3 data-i18n="kenapa2.title">Bisa Diaudit</h3>
+      <p data-i18n="kenapa2.desc">Validator agent, eval per fitur, mode &ldquo;watch agent think&rdquo;.</p>
+    </div>
+    <div class="kenapa-card r d2">
+      <div class="kenapa-num">03</div>
+      <h3 data-i18n="kenapa3.title">Cepat &amp; Transparan</h3>
+      <p data-i18n="kenapa3.desc">Definisi &ldquo;selesai&rdquo; disepakati di awal; Anda lihat progress, bukan janji.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ TIM ════════════════ -->
+<section id="tim" class="section-wrap" data-screen-label="Tim">
+  <span class="mono section-label" data-i18n="tim.label">TIM</span>
+  <h2 class="section-title r" data-i18n="tim.title">Dipimpin Praktisi</h2>
+  <div class="tim-grid">
+    <div class="founder r">
+      <div class="founder-av av-blue">DA</div>
+      <div>
+        <h3>Dika Aulia Ardi, S.Kom</h3>
+        <span class="founder-role" data-i18n="tim.dika.role">Direktur</span>
+        <p data-i18n="tim.dika.bio">Sarjana Komputer dengan pengalaman di perusahaan IT multinasional. Memimpin operasional, pengembangan teknis, dan hubungan klien.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ KONTAK ════════════════ -->
+<section id="kontak" data-screen-label="Kontak">
+  <h2 class="r" data-i18n="kontak.title">Mari Bicarakan Kebutuhan Anda.</h2>
+  <p class="sub r d1" data-i18n="kontak.sub">Diskusi 30 menit gratis. Ceritakan masalah operasional Anda — kami jawab dengan rencana konkret.</p>
+  <div class="kontak-ctas r d2">
+    <a href="https://wa.me/628218417551" target="_blank" rel="noopener" class="btn-amber" data-i18n="kontak.cta1">💬 Hubungi via WhatsApp</a>
+    <a href="mailto:kontak@digdayasolusi.co.id" class="btn-ghost" data-i18n="kontak.cta2">✉ Email Kami</a>
+  </div>
+  <div class="kontak-details r d3">
+    <div class="kd-item">
+      <span class="kd-label" data-i18n="kontak.wa.label">WhatsApp</span>
+      <span class="kd-val">+62 821-8417-551</span>
+    </div>
+    <div class="kd-item">
+      <span class="kd-label" data-i18n="kontak.email.label">Email</span>
+      <span class="kd-val">kontak@digdayasolusi.co.id</span>
+    </div>
+    <div class="kd-item">
+      <span class="kd-label" data-i18n="kontak.lokasi.label">Lokasi</span>
+      <span class="kd-val" data-i18n="kontak.lokasi.val">Indonesia</span>
+    </div>
+    <div class="kd-item">
+      <span class="kd-label" data-i18n="kontak.jam.label">Jam Operasional</span>
+      <span class="kd-val" data-i18n="kontak.jam.val">Sen–Jum 08.00–17.00 · Sab 09.00–13.00 WIB</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ FOOTER ════════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <div class="logo-mark">DSS</div>
+        <span class="logo-text" style="color:#fff">Digdaya Solusi Sistem</span>
+      </div>
+      <p data-i18n="footer.brand.desc">Perusahaan teknologi &amp; AI untuk Industri dan Healthcare Indonesia.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer.solusi.title">Solusi</h4>
+      <ul class="footer-links">
+        <li><a href="#solusi" data-i18n="footer.sol1">AI Agent &amp; Otomasi</a></li>
+        <li><a href="#solusi" data-i18n="footer.sol2">Pengembangan Software</a></li>
+        <li><a href="#solusi" data-i18n="footer.sol3">Data &amp; Analitik</a></li>
+        <li><a href="#solusi" data-i18n="footer.sol4">Konsultasi TI</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer.perusahaan.title">Perusahaan</h4>
+      <ul class="footer-links">
+        <li><a href="https://dssindustria.com" target="_blank" rel="noopener" data-i18n="footer.link.produk">Produk — dssindustria.com</a></li>
+        <li><a href="#kontak" data-i18n="footer.link.kontak">Kontak</a></li>
+        <li><a href="#" onclick="return false" data-i18n="footer.link.privasi">Kebijakan Privasi</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p data-i18n="footer.copy">© 2026 PT Digdaya Solusi Sistem. All Rights Reserved.</p>
+    <a href="#" onclick="return false" data-i18n="footer.link.privasi">Kebijakan Privasi</a>
+  </div>
+</footer>
+
+<!-- ════════════════ WHATSAPP FLOAT ════════════════ -->
+<a href="https://wa.me/628218417551" target="_blank" rel="noopener" class="wa-btn" data-i18n-title="wa.title" title="Hubungi via WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+/* ══════════════════ i18n ══════════════════ */
+const I18N = {
+  id: {
+    'nav.tentang':'Tentang','nav.solusi':'Solusi','nav.produk':'Produk','nav.kontak':'Kontak',
+    'nav.cta':'Hubungi Kami','nav.mob.wa':'💬 Hubungi via WhatsApp',
+    'hero.eyebrow':'PT DIGDAYA SOLUSI SISTEM · INDONESIA',
+    'hero.h1':'Memberdayakan<br>Bisnis Indonesia<br>dengan <em>Teknologi</em> &amp; AI.',
+    'hero.sub':'Kami merancang perangkat lunak, AI agent, dan solusi data yang membantu perusahaan bertumbuh, beradaptasi, dan memimpin di era digital — dengan eksekusi teknis end-to-end dan kedalaman pengalaman lapangan.',
+    'hero.cta1':'💬 Konsultasi Gratis','hero.cta2':'Lihat Produk Kami →',
+    'hero.card.ai':'AI Agent','hero.card.dev':'Web & Mobile','hero.card.data':'Data','hero.card.consulting':'Konsultasi',
+    'tentang.label':'TENTANG KAMI',
+    'tentang.title':'Studio Teknologi yang Lahir dari Lantai Industri',
+    'tentang.p':'PT Digdaya Solusi Sistem adalah perusahaan teknologi berbadan hukum yang melayani klien di seluruh Indonesia. Kami menggabungkan keahlian domain — industri/manufaktur dan healthcare — dengan eksekusi teknis modern: pengembangan perangkat lunak, AI agent, pengolahan data, dan konsultasi TI. Misi kami sederhana: memberikan solusi teknologi bernilai nyata yang bisa diukur, bukan janji.',
+    'chip1.title':'Praktisi, bukan teoritis','chip1.desc':'Lahir dari pengalaman nyata di lantai industri & manufaktur',
+    'chip2.title':'Sistem AI yang bisa diaudit','chip2.desc':'Setiap langkah ter-trace',
+    'chip3.title':'Lokal & responsif','chip3.desc':'Bahasa Indonesia, dukungan langsung',
+    'solusi.label':'SOLUSI & LAYANAN','solusi.title':'Empat Cara Kami Membantu Anda',
+    'solusi.intro':'Layanan teknologi resmi sesuai bidang usaha berizin (KBLI). Bisa proyek kustom dari nol, atau adopsi produk siap pakai kami.',
+    'sol1.title':'AI Agent & Otomasi Cerdas','sol1.desc':'Sistem multi-agent (planner–executor–validator), machine learning, dan otomasi alur kerja yang bisa diaudit.','sol1.cta':'Pelajari',
+    'sol2.title':'Pengembangan Perangkat Lunak','sol2.desc':'Aplikasi web & mobile dan software siap pakai, dirancang mengikuti proses kerja riil Anda — bukan sebaliknya.','sol2.cta':'Pelajari',
+    'sol3.title':'Data, Analitik & Platform Digital','sol3.desc':'Data engineering, dashboard pendukung keputusan, portal web, dan platform e-commerce.','sol3.cta':'Pelajari',
+    'sol4.title':'Konsultasi TI, Keamanan & Infrastruktur','sol4.desc':'Audit, blueprint arsitektur, vendor selection, keamanan informasi, hosting & pengadaan TI.','sol4.cta':'Pelajari',
+    'produk.label':'PRODUK KAMI',
+    'produk.title':'Sudah Punya Produk Siap Pakai: DSS Industria',
+    'produk.intro':'Di bawah brand <strong>DSS Industria</strong>, kami sudah membangun 9 aplikasi untuk industri &amp; healthcare — sebagian bisa langsung dicoba demonya. Selengkapnya di situs produk kami.',
+    'prod1.name':'DSS Supplier Selection','prod1.desc':'Pilih supplier terbaik dengan AHP-TOPSIS.','prod1.status':'LIVE',
+    'prod2.name':'Inventory Industria','prod2.desc':'Stok terintegrasi: web + mobile + AI vision.','prod2.status':'Siap Demo',
+    'prod3.name':'Scribe Medis','prod3.desc':'Dokumentasi konsultasi dokter otomatis.','prod3.status':'Membuka Pilot',
+    'prod4.name':'JadwalAI','prod4.desc':'Booking janji temu klinik via WhatsApp 24/7.','prod4.status':'Membuka Pilot',
+    'produk.cta':'Jelajahi Semua Produk di dssindustria.com →',
+    'produk.note':'Butuh solusi yang belum ada di daftar? Kami bangun kustom. →','produk.note.link':'Konsultasi',
+    'kenapa.label':'KENAPA DIGDAYA SOLUSI SISTEM','kenapa.title':'Domain + Eksekusi, dalam Satu Tim',
+    'kenapa1.title':'Kedalaman Lapangan','kenapa1.desc':'Kami paham operasi pabrik &amp; klinik, bukan sekadar koding.',
+    'kenapa2.title':'Bisa Diaudit','kenapa2.desc':'Validator agent, eval per fitur, mode &ldquo;watch agent think&rdquo;.',
+    'kenapa3.title':'Cepat &amp; Transparan','kenapa3.desc':'Definisi &ldquo;selesai&rdquo; disepakati di awal; Anda lihat progress, bukan janji.',
+    'tim.label':'TIM','tim.title':'Dipimpin Praktisi',
+    'tim.dika.role':'Direktur',
+    'tim.dika.bio':'Sarjana Komputer dengan pengalaman di perusahaan IT multinasional. Memimpin operasional, pengembangan teknis, dan hubungan klien.',
+    'kontak.title':'Mari Bicarakan Kebutuhan Anda.',
+    'kontak.sub':'Diskusi 30 menit gratis. Ceritakan masalah operasional Anda — kami jawab dengan rencana konkret.',
+    'kontak.cta1':'💬 Hubungi via WhatsApp','kontak.cta2':'✉ Email Kami',
+    'kontak.wa.label':'WhatsApp','kontak.email.label':'Email',
+    'kontak.lokasi.label':'Lokasi','kontak.lokasi.val':'Indonesia',
+    'kontak.jam.label':'Jam Operasional','kontak.jam.val':'Sen–Jum 08.00–17.00 · Sab 09.00–13.00 WIB',
+    'footer.brand.desc':'Perusahaan teknologi &amp; AI untuk Industri dan Healthcare Indonesia.',
+    'footer.solusi.title':'Solusi','footer.sol1':'AI Agent &amp; Otomasi','footer.sol2':'Pengembangan Software','footer.sol3':'Data &amp; Analitik','footer.sol4':'Konsultasi TI',
+    'footer.perusahaan.title':'Perusahaan','footer.link.produk':'Produk — dssindustria.com','footer.link.kontak':'Kontak','footer.link.privasi':'Kebijakan Privasi',
+    'footer.copy':'© 2026 PT Digdaya Solusi Sistem. All Rights Reserved.',
+    'wa.title':'Hubungi via WhatsApp',
+  },
+  en: {
+    'nav.tentang':'About','nav.solusi':'Solutions','nav.produk':'Products','nav.kontak':'Contact',
+    'nav.cta':'Contact Us','nav.mob.wa':'💬 Contact via WhatsApp',
+    'hero.eyebrow':'PT DIGDAYA SOLUSI SISTEM · INDONESIA',
+    'hero.h1':'Empowering<br>Indonesian Business<br>with <em>Technology</em> &amp; AI.',
+    'hero.sub':'We design software, AI agents, and data solutions that help companies grow, adapt, and lead in the digital era — with end-to-end technical execution and deep field expertise.',
+    'hero.cta1':'💬 Free Consultation','hero.cta2':'Explore Our Products →',
+    'hero.card.ai':'AI Agent','hero.card.dev':'Web & Mobile','hero.card.data':'Data','hero.card.consulting':'Consulting',
+    'tentang.label':'ABOUT US',
+    'tentang.title':'A Tech Company Born on the Factory Floor',
+    'tentang.p':'PT Digdaya Solusi Sistem is a legally incorporated technology company serving clients across Indonesia. We combine domain expertise — manufacturing industry and healthcare — with modern technical execution: software development, AI agents, data processing, and IT consulting. Our mission is simple: deliver measurable, real-value technology solutions — not promises.',
+    'chip1.title':'Practitioners, not theorists','chip1.desc':'Born from real experience on the factory and industry floor',
+    'chip2.title':'Auditable AI systems','chip2.desc':'Every step is fully traceable',
+    'chip3.title':'Local & responsive','chip3.desc':'Bahasa Indonesia, direct support',
+    'solusi.label':'SOLUTIONS & SERVICES','solusi.title':'Four Ways We Help You',
+    'solusi.intro':'Official technology services within our licensed business scope (KBLI). Custom projects from scratch, or adopt our ready-to-use products.',
+    'sol1.title':'AI Agent & Intelligent Automation','sol1.desc':'Multi-agent systems (planner–executor–validator), machine learning, and fully auditable workflow automation.','sol1.cta':'Learn More',
+    'sol2.title':'Software Development','sol2.desc':'Web & mobile applications and ready-to-use software, designed to follow your real workflows — not the other way around.','sol2.cta':'Learn More',
+    'sol3.title':'Data, Analytics & Digital Platforms','sol3.desc':'Data engineering, decision-support dashboards, web portals, and e-commerce platforms.','sol3.cta':'Learn More',
+    'sol4.title':'IT, Security & Infrastructure Consulting','sol4.desc':'Audits, architecture blueprints, vendor selection, information security, hosting & IT procurement.','sol4.cta':'Learn More',
+    'produk.label':'OUR PRODUCTS',
+    'produk.title':'Ready-to-Use Products: DSS Industria',
+    'produk.intro':'Under the <strong>DSS Industria</strong> brand, we\'ve built 9 applications for industry &amp; healthcare — some available for demo today. Full catalog at our product site.',
+    'prod1.name':'DSS Supplier Selection','prod1.desc':'Pick the best supplier with AHP-TOPSIS.','prod1.status':'LIVE',
+    'prod2.name':'Inventory Industria','prod2.desc':'Integrated stock: web + mobile + AI vision.','prod2.status':'Ready for Demo',
+    'prod3.name':'Medical Scribe','prod3.desc':'Automated doctor consultation documentation.','prod3.status':'Opening Pilot',
+    'prod4.name':'JadwalAI','prod4.desc':'Clinic appointment booking via WhatsApp 24/7.','prod4.status':'Opening Pilot',
+    'produk.cta':'Explore All Products at dssindustria.com →',
+    'produk.note':'Need a solution not on the list? We build custom. →','produk.note.link':'Consult Us',
+    'kenapa.label':'WHY DIGDAYA SOLUSI SISTEM','kenapa.title':'Domain + Execution, in One Team',
+    'kenapa1.title':'Field Depth','kenapa1.desc':'We understand factory &amp; clinic operations — not just code.',
+    'kenapa2.title':'Fully Auditable','kenapa2.desc':'Agent validators, per-feature eval, &ldquo;watch agent think&rdquo; mode.',
+    'kenapa3.title':'Fast &amp; Transparent','kenapa3.desc':'"Done" is defined upfront; you see progress, not promises.',
+    'tim.label':'TEAM','tim.title':'Led by Practitioners',
+    'tim.dika.role':'Director',
+    'tim.dika.bio':'Computer Science graduate with experience at multinational IT companies. Leads operations, technical development, and client relations.',
+    'kontak.title':'Let\'s Talk About Your Needs.',
+    'kontak.sub':'Free 30-minute discussion. Tell us your operational problem — we respond with a concrete plan.',
+    'kontak.cta1':'💬 Contact via WhatsApp','kontak.cta2':'✉ Email Us',
+    'kontak.wa.label':'WhatsApp','kontak.email.label':'Email',
+    'kontak.lokasi.label':'Location','kontak.lokasi.val':'Indonesia',
+    'kontak.jam.label':'Business Hours','kontak.jam.val':'Mon–Fri 08:00–17:00 · Sat 09:00–13:00 WIB',
+    'footer.brand.desc':'Technology &amp; AI company for Indonesian Industry and Healthcare.',
+    'footer.solusi.title':'Solutions','footer.sol1':'AI Agent &amp; Automation','footer.sol2':'Software Development','footer.sol3':'Data &amp; Analytics','footer.sol4':'IT Consulting',
+    'footer.perusahaan.title':'Company','footer.link.produk':'Products — dssindustria.com','footer.link.kontak':'Contact','footer.link.privasi':'Privacy Policy',
+    'footer.copy':'© 2026 PT Digdaya Solusi Sistem. All Rights Reserved.',
+    'wa.title':'Contact via WhatsApp',
+  }
+};
+
+const PAGE_TITLES = {
+  id: 'PT Digdaya Solusi Sistem — Teknologi & AI untuk Bisnis Indonesia',
+  en: 'PT Digdaya Solusi Sistem — Technology & AI for Indonesian Business'
+};
+const META_DESCS = {
+  id: 'PT Digdaya Solusi Sistem — perusahaan teknologi & AI di Indonesia. Spesialis AI agent, pengembangan perangkat lunak, data analitik, dan konsultasi TI untuk industri dan healthcare.',
+  en: 'PT Digdaya Solusi Sistem — technology & AI company in Indonesia. Specialists in AI agents, software development, data analytics, and IT consulting for industry and healthcare.'
+};
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  localStorage.setItem('dss-lang', lang);
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = I18N[lang][el.dataset.i18n];
+    if (v != null) el.innerHTML = v;
+  });
+  document.querySelectorAll('[data-i18n-title]').forEach(el => {
+    const v = I18N[lang][el.dataset.i18nTitle];
+    if (v != null) el.title = v;
+  });
+  document.querySelectorAll('.lt-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  document.title = PAGE_TITLES[lang];
+  const md = document.querySelector('meta[name="description"]');
+  if (md) md.content = META_DESCS[lang];
+}
+
+// Init language
+setLang(localStorage.getItem('dss-lang') || 'id');
+
+/* ══════════════════ NAV scroll ══════════════════ */
+const nav = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 24);
+  highlightNav();
+}, {passive: true});
+
+function highlightNav() {
+  const sections = ['tentang','solusi','produk','kontak'];
+  const links = document.querySelectorAll('.nav-links a');
+  let current = '';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && window.scrollY >= el.offsetTop - 100) current = id;
+  });
+  links.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+}
+
+/* ══════════════════ Mobile menu ══════════════════ */
+function toggleMenu() {
+  document.getElementById('ham').classList.toggle('open');
+  document.getElementById('mob').classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('ham').classList.remove('open');
+  document.getElementById('mob').classList.remove('open');
+}
+
+/* ══════════════════ Anchor smooth scroll ══════════════════ */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = a.getAttribute('href');
+    if (target === '#') return;
+    e.preventDefault();
+    const el = document.querySelector(target);
+    if (el) window.scrollTo({top: el.getBoundingClientRect().top + window.pageYOffset - 76, behavior: 'smooth'});
+  });
+});
+
+/* ══════════════════ Reveal on scroll ══════════════════ */
+const reveals = document.querySelectorAll('.r');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
+}, {threshold: 0.1, rootMargin: '0px 0px -32px 0px'});
+reveals.forEach(el => obs.observe(el));
+
+/* ══════════════════ Hero blob parallax ══════════════════ */
+const bA = document.getElementById('blobA');
+const bB = document.getElementById('blobB');
+window.addEventListener('scroll', () => {
+  const y = window.pageYOffset;
+  if (bA) bA.style.transform = `translateY(${y * 0.18}px)`;
+  if (bB) bB.style.transform = `translateY(${y * 0.09}px)`;
+}, {passive: true});
+</script>
+</body>
+</html>
